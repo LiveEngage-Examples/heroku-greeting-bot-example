@@ -36,13 +36,12 @@ agent.on('cqm.ExConversationChangeNotification', notificationBody => {
               'role': 'MANAGER'
             }]
           }, () => {
-            agent.publishEvent({
-              dialogId: change.result.convId,
-              event: {
-                type: 'ContentEvent',
-                contentType: 'text/plain',
-                message: 'welcome from bot'
-              }
+            agent.updateConversationField({
+              'conversationId': change.result.convId,
+              'conversationField': [{
+                'field': 'ConversationStateField',
+                'conversationState': 'CLOSE'
+              }]
             });
           });
         }
