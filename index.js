@@ -11,7 +11,7 @@ const agent = new Agent({
   accessToken: process.env.LP_ACCESS_TOKEN,
   accessTokenSecret: process.env.LP_TOKEN_SECRET
 });
-
+console.log(agent)
 let openConvs = {};
 
 agent.on('connected', () => {
