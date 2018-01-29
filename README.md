@@ -28,6 +28,10 @@ or
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+You will also need to update your env variables on Heroku
+
+![alt text](https://raw.githubusercontent.com/LiveEngage-Examples/heroku-greeting-bot-example/master/2018-01-29_1711.png)
+
 ## Documentation
 
 For more information about using Node.js on Heroku, see these Dev Center articles:
