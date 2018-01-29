@@ -1,0 +1,26 @@
+{
+  "name": "lp-greeting-bot-heroku",
+  "version": "0.3.0",
+  "description": "LP Greeting Bot Example - Heroku",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "node-agent-sdk": "^0.3.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LiveEngage-Examples/heroku-greeting-bot-example.git"
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Heroku - LP Greeting Bot",
+  "description": "A sample LP bot running on heroku",
+  "repository": "https://github.com/LiveEngage-Examples/heroku-greeting-bot-example.git",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node","heroku"],
+  "image": "heroku/nodejs"
+}
