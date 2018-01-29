@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotenv').config() // for local dev
+require('dotenv').config();
 const { Agent } = require('node-agent-sdk');
 
 const agent = new Agent({
@@ -11,7 +11,7 @@ const agent = new Agent({
   accessToken: process.env.LP_ACCESS_TOKEN,
   accessTokenSecret: process.env.LP_TOKEN_SECRET
 });
-console.log(agent)
+
 let openConvs = {};
 
 agent.on('connected', () => {
@@ -36,12 +36,13 @@ agent.on('cqm.ExConversationChangeNotification', notificationBody => {
               'role': 'MANAGER'
             }]
           }, () => {
-            agent.updateConversationField({
-              'conversationId': change.result.convId,
-              'conversationField': [{
-                'field': 'ConversationStateField',
-                'conversationState': 'CLOSE'
-              }]
+            agent.publishEvent({
+              dialogId: change.result.convId,
+              event: {
+                type: 'ContentEvent',
+                contentType: 'text/plain',
+                message: 'welcome from bot'
+              }
             });
           });
         }
